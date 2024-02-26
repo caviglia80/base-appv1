@@ -1,0 +1,14 @@
+<div *ngIf="data">
+  <div *ngFor="let dataItem of data" class="news-item shadow-sm p-3 mb-5 bg-white rounded">
+    <h2>{{ dataItem.Headline }}</h2>
+    <p>{{ dataItem.Summary }}</p>
+    <a href="{{ dataItem.URL }}" target="_blank" rel="noopener noreferrer">Leer más</a>
+    <div class="news-images d-flex flex-wrap">
+      <img *ngFor="let image of dataItem.Images" [src]="image.url" [alt]="dataItem.Headline" [ngClass]="{
+          'img-large': image.size === 'large',
+          'img-small': image.size === 'small',
+          'img-thumb': image.size === 'thumb'
+        }" class="news-image img-fluid">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+/* .img-large {
+
+}
+
+.img-small {
+
+}
+
+.img-thumb {
+
+} */
+
+/* Mantienes tus estilos existentes */
+.news-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.news-images {
+  margin-top: 10px;
+}
+
+.news-image {
+  width: 100%;
+  max-width: 200px;
+  /* Ajusta según necesites */
+  height: auto;
+  margin-right: 10px;
+}

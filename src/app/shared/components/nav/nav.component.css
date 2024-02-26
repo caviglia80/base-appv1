@@ -1,0 +1,165 @@
+.sidenav-container {
+  display: flex;
+  height: 94.7vh !important;
+}
+
+mat-sidenav {
+  background-color: var(--color-sideBarBackgroundSolid);
+  width: 250px;
+  z-index: 4 !important;
+}
+
+mat-sidenav-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+mat-nav-list .background {
+  position: absolute;
+  z-index: -1 !important;
+  height: 100%;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+  background-image: var(--sidebar-background-image);
+  opacity: var(--sideBar-background-image-opacity);
+}
+
+mat-nav-list .background .backgroundColor {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+  background-color: var(--sideBar-Background-color);
+  opacity: var(--sideBar-Background-opacity);
+}
+
+.sidenav-container mat-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 16px;
+  font-size: 18px;
+  line-height: 18px;
+  overflow: hidden;
+}
+
+.sidenav-container .active-link span,
+.sidenav-container .active-link mat-icon,
+.sidenav-container .navbar .toggle-button:hover {
+  color: var(--sideBar-ActiveButton) !important;
+  fill: var(--sideBar-ActiveButton) !important;
+}
+
+.navbar .toggle-button:hover {
+  filter: brightness(1.4);
+}
+
+.sidenav-container .exit:hover mat-icon,
+.sidenav-container .exit:hover span {
+  color: var(--sidebar-exitButton);
+  fill: var(--sidebar-exitButton);
+}
+
+nav .backgroundColor {
+  position: absolute;
+  z-index: -1 !important;
+  height: 100%;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+  background: var(--navBar-Background);
+  opacity: var(--navBar-Background-opacity);
+}
+
+.navbar {
+  position: relative;
+  height: 50px;
+  transition: all .8s ease-out;
+}
+
+.navbar .container-fluid {
+  position: relative;
+}
+
+.navbar .container-fluid .navbar-icon {
+  position: absolute;
+  max-width: 40px;
+  max-height: 40px;
+  right: 6px;
+}
+
+.navbar .container-fluid .toggle-button {
+  position: absolute;
+  left: 8px;
+  border: none;
+  background-color: transparent;
+}
+
+.navbar .container-fluid .toggle-button mat-icon {
+  color: white;
+  max-width: 40px;
+  max-height: 40px;
+  transform: scale(1.2);
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+  background: transparent;
+}
+
+mat-expansion-panel .subMenu {
+  padding-left: 5px;
+  padding-right: 0;
+}
+
+mat-expansion-panel mat-list-item mat-icon {
+  font-size: 15px;
+}
+
+mat-expansion-panel-header {
+  padding: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .showOverlay {
+    display: block;
+  }
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-userInfo {
+  margin-right: 42px;
+  font-weight: bold;
+}
+
+.SA {
+  text-shadow: 1px 1px 3px rgba(255, 0, 0, 1), 1px 1px 3px rgba(0, 0, 0, 1);
+}

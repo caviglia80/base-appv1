@@ -1,0 +1,90 @@
+<section>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" [ngClass]="{'mat-elevation-z6': !sidenavOpened}">
+    <div class="backgroundColor"></div>
+    <div class="container-fluid"> <!-- mt-lg-2 -->
+      <button class="toggle-button mt-2" (click)="toggleSidenav();">
+        <mat-icon>{{ sidenavOpened ? 'arrow_back_ios' : 'menu' }}</mat-icon>
+      </button>
+
+      <div class="right-container">
+        <div class="text-white nav-userInfo">
+          <span *ngIf="username">{{ username }}</span>
+          <span *ngIf="rolName"> ({{ rolName }})</span>
+        </div>
+        <img class="navbar-icon" [src]="icono" alt="logo" *ngIf="icono">
+      </div>
+
+    </div>
+  </nav>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened">
+      <mat-nav-list>
+
+        <div class="background">
+          <div class="backgroundColor"></div>
+        </div>
+
+        <mat-list-item routerLinkActive="active-link" routerLink="/nav/perfil" (click)="toggleSidenav();">
+          <mat-icon>dashboard</mat-icon>
+          <span>Perfil</span>
+        </mat-list-item>
+
+        <mat-list-item routerLinkActive="active-link" routerLink="/nav/noticias" (click)="toggleSidenav();">
+          <mat-icon>dashboard</mat-icon>
+          <span>Noticias</span>
+        </mat-list-item>
+
+        <mat-list-item routerLinkActive="active-link" routerLink="/nav/registros" (click)="toggleSidenav();">
+          <mat-icon>dashboard</mat-icon>
+          <span>Registros</span>
+        </mat-list-item>
+
+        <mat-list-item routerLinkActive="active-link" routerLink="/nav/operaciones" (click)="toggleSidenav();">
+          <mat-icon>attach_money</mat-icon>
+          <span>Operaciones</span>
+        </mat-list-item>
+
+        <mat-list-item routerLinkActive="active-link" routerLink="/nav/procesos" (click)="toggleSidenav();">
+          <mat-icon>money_off</mat-icon>
+          <span>Procesos</span>
+        </mat-list-item>
+
+        <!-- <mat-accordion *ngIf="general || usuarios || roles || renovacion">
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-list-item>
+                <mat-icon>settings</mat-icon>
+                <span>Configuración</span>
+              </mat-list-item>
+            </mat-expansion-panel-header>
+
+            <mat-list-item *ngIf="general" class="subMenu" routerLinkActive="active-link" routerLink="/nav/general"
+              (click)="toggleSidenav(); loadingService.setLoading(true, '/nav/general')">
+              <mat-icon>build</mat-icon>
+              <span>General</span>
+            </mat-list-item>
+
+            <mat-list-item *ngIf="usuarios" class="subMenu" routerLinkActive="active-link" routerLink="/nav/usuarios"
+              (click)="toggleSidenav(); loadingService.setLoading(true, '/nav/usuarios')">
+              <mat-icon>group</mat-icon>
+              <span>Usuarios</span>
+            </mat-list-item>
+
+          </mat-expansion-panel>
+        </mat-accordion> -->
+
+        <!-- <mat-list-item class="exit" (click)="salir()">
+          <mat-icon>power_settings_new</mat-icon>
+          <span>Salir</span>
+        </mat-list-item> -->
+
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="overlay" [ngClass]="{'showOverlay': sidenavOpened}" (click)="toggleSidenav();"></div>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</section>

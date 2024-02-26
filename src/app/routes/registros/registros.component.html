@@ -1,0 +1,151 @@
+<!-- <div class="container mt-4" *ngIf="data">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Símbolo</th>
+          <th>Nombre</th>
+          <th>Clase</th>
+          <th>Bolsa</th>
+          <th>Estado</th>
+          <th>Tradable</th>
+          <th>Marginable</th>
+          <th>Margen</th>
+          <th>Shortable</th>
+          <th>Pedir Prestado</th>
+          <th>Fraccionable</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+          <td>{{ item.symbol }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.class }}</td>
+          <td>{{ item.exchange }}</td>
+          <td>{{ item.status }}</td>
+          <td>{{ item.tradable ? 'Sí' : 'No' }}</td>
+          <td>{{ item.marginable ? 'Sí' : 'No' }}</td>
+          <td>{{ item.maintenance_margin_requirement }}</td>
+          <td>{{ item.shortable ? 'Sí' : 'No' }}</td>
+          <td>{{ item.easy_to_borrow ? 'Sí' : 'No' }}</td>
+          <td>{{ item.fractionable ? 'Sí' : 'No' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+
+
+<div class="container mt-4" *ngIf="data">
+  <div class="row">
+    <!-- Tarjeta de Símbolo -->
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Símbolo</h5>
+          <p class="card-text">{{ data.symbol }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Nombre -->
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Nombre</h5>
+          <p class="card-text">{{ data.name }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Clase -->
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Clase</h5>
+          <p class="card-text">{{ data.class }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Bolsa -->
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Bolsa</h5>
+          <p class="card-text">{{ data.exchange }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Estado -->
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Estado</h5>
+          <p class="card-text">{{ data.status }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Tradable -->
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Tradable</h5>
+          <p class="card-text">{{ data.tradable ? 'Sí' : 'No' }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Marginable -->
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Marginable</h5>
+          <p class="card-text">{{ data.marginable ? 'Sí' : 'No' }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Margen de Mantenimiento -->
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Margen de Mantenimiento</h5>
+          <p class="card-text">{{ data.maintenance_margin_requirement }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Shortable -->
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Shortable</h5>
+          <p class="card-text">{{ data.shortable ? 'Sí' : 'No' }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Fácil de Pedir Prestado -->
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Fácil de Pedir Prestado</h5>
+          <p class="card-text">{{ data.easy_to_borrow ? 'Sí' : 'No' }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Fraccionable -->
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Fraccionable</h5>
+          <p class="card-text">{{ data.fractionable ? 'Sí' : 'No' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

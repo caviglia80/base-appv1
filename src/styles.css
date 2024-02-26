@@ -1,0 +1,33 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+@import '~material-icons/iconfont/material-icons.css';
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif !important;
+}
+
+:root {
+  /* colores globales - de mas claro a mas oscuro */
+  --color-1: rgb(133, 109, 243);
+  --color-2: rgb(76, 40, 236);
+  /* fondo del contenido */
+  --content-Background-color: var(--color-2);
+  --content-Background-opacity: .07;
+  /* sideBar */
+  --sidebar-exitButton: rgba(255, 0, 0, 0.658);
+  --sidebar-background-image: url(./assets/img/2.jpg);
+  --sideBar-background-image-opacity: .2;
+  --sideBar-Background-color: var(--color-1);
+  --sideBar-Background-opacity: .4;
+  --sideBar-ActiveButton: var(--color-1);
+  /* navBar */
+  --navBar-Background: linear-gradient(60deg, var(--color-1), var(--color-2));
+  --navBar-Background-opacity: 1;
+}

@@ -1,0 +1,29 @@
+<div class="container mt-4" *ngIf="data">
+  <h2 class="mb-3">Detalles de la Cuenta</h2>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Número de Cuenta: {{ data.account_number }}</h5>
+      <p class="card-text"><strong>Estado:</strong> {{ data.status }}</p>
+      <p class="card-text"><strong>Estado Cripto:</strong> {{ data.crypto_status }}</p>
+      <p class="card-text"><strong>Divisa:</strong> {{ data.currency }}</p>
+      <p class="card-text"><strong>Poder de Compra:</strong> ${{ data.buying_power }}</p>
+      <p class="card-text"><strong>Poder de Compra REGT:</strong> ${{ data.regt_buying_power }}</p>
+      <p class="card-text"><strong>Poder de Compra para el Día:</strong> ${{ data.daytrading_buying_power }}</p>
+      <p class="card-text"><strong>Poder de Compra Efectivo:</strong> ${{ data.effective_buying_power }}</p>
+      <p class="card-text"><strong>Poder de Compra No Marginable:</strong> ${{ data.non_marginable_buying_power }}</p>
+      <p class="card-text"><strong>Valor de la Cartera:</strong> ${{ data.portfolio_value }}</p>
+      <p class="card-text"><strong>Cash:</strong> ${{ data.cash }}</p>
+      <p class="card-text"><strong>Comercio Bloqueado:</strong> {{ data.trading_blocked ? 'Sí' : 'No' }}</p>
+      <p class="card-text"><strong>Transferencias Bloqueadas:</strong> {{ data.transfers_blocked ? 'Sí' : 'No' }}</p>
+      <p class="card-text"><strong>Cuenta Bloqueada:</strong> {{ data.account_blocked ? 'Sí' : 'No' }}</p>
+      <p class="card-text"><strong>Habilitado para Corto:</strong> {{ data.shorting_enabled ? 'Sí' : 'No' }}</p>
+      <p class="card-text"><strong>Equidad:</strong> ${{ data.equity }}</p>
+      <p class="card-text"><strong>Última Equidad:</strong> ${{ data.last_equity }}</p>
+      <p class="card-text"><strong>Valor de Mercado Largo:</strong> ${{ data.long_market_value }}</p>
+      <p class="card-text"><strong>Valor de Mercado Corto:</strong> ${{ data.short_market_value }}</p>
+      <p class="card-text"><strong>Valor de Posición en Mercado:</strong> ${{ data.position_market_value }}</p>
+      <p class="card-text"><strong>Fecha de Creación:</strong> {{ data.created_at | date: 'dd-MM-yyyy' }}</p>
+      <p class="card-text"><strong>Nivel Cripto:</strong> {{ data.crypto_tier }}</p>
+    </div>
+  </div>
+</div>
