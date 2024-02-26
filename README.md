@@ -5,4 +5,4 @@
 * Uso de mat-icon
 * Uso de Bootstrap
 * Full responsivo
-* Etc, excelente para los primeros pasos de cvualquier app web
+* Etc, excelente para los primeros pasos de cualquier web app
